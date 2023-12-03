@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTacToe</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+    </style>
+  </head>
+  <body
+    class="bg-background-dark_blue text-whites-white min-h-screen font-[Outfit] flex items-center"
+  >
+    <section class="max-w-[328px] sm:max-w-[460px] w-full mx-auto">
+      <div class="w-full flex justify-between mb-4 items-center">
+        <div class="w-[96px] sm:w-[140px]">
+            <img
+              class="w-16 h-5 sm:w-20 sm:h-9"
+              src="./assets/XO.svg"
+              alt=""
+            />
+        </div>
+        <div
+          class="flex items-center justify-center bg-background-light_blue p-2 w-[96px] sm:w-[140px] text-xl rounded-lg py-2 sm:pb-3 shadow-[inset_0px_-4px_0px_#10212A]"
+        >
+          <img  src="./assets/turn.svg" alt="" />
+          <h2 class="sm:text-xl text-sm">&nbsp; &nbsp; TURN</h2>
+        </div>
+        <div class="w-[96px] sm:w-[140px] flex justify-end">
+            <button
+              class="flex items-center w-9 h-9 sm:w-12 sm:h-12 bg-whites-grey p-3 rounded-lg hover:bg-whites-white transition duration-200 ease-in-out"
+            >
+              <img src="./assets/reload.svg" alt="" />
+            </button>
+        </div>
+      </div>
+      <section class="grid place-items-center grid-cols-3 gap-3 mb-5 game">
+        <div class="box" id="first"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </section>
+      <div class="flex gap3 justify-between text-black">
+        <div class="table bg-blues-dark text-sm sm:text-xl ">
+            <h2>X (PLAYER 1)</h2>
+            <p>0</p>
+        </div>
+        <div class="table bg-whites-grey text-sm sm:text-xl">
+            <h2>TIES</h2>
+            <p>0</p>
+        </div>
+        <div class="table bg-oranges-dark text-sm sm:text-xl">
+            <h2>O (PLAYER 2)</h2>
+            <p>0</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

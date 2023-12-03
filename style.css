@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+  @apply bg-background-light_blue py-2 px-4 rounded-lg shadow-[inset_0px_-8px_0px_#10212A] w-[96px] h-[96px] sm:w-[140px] sm:h-[140px] flex justify-center items-center;
+}
+
+.table {
+    @apply w-[96px] sm:w-[140px] py-2 rounded-lg flex justify-center items-center flex-col;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicTacToe</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+    </style>
+  </head>
+  <body
+    class="bg-background-dark_blue text-whites-white min-h-screen font-[Outfit] flex items-center"
+  >
+    <section class="w-10/12 sm:w-6/12 mx-auto">
+      <div class="w-full flex justify-center mb-4 w-15 h-5 sm:w-15 sm:h-8">
+        <img clsss="mx-auto w-15 h-5 sm:w-15 sm:h-1" src="./assets/XO.svg" alt="" />
+      </div>
+      <section
+        class="bg-background-light_blue p-4 rounded-2xl shadow-lg shadow-black mb-14 text-md sm:text-xl"
+      >
+        <h2 class="text-s text-center mb-4 ">PICK PLAYER 1'S MARK</h2>
+        <div
+          class="bg-background-dark_blue flex p-3 gap-3 text-4xl sm:text-6xl rounded-xl mb-8"
+        >
+          <button class="rounded-lg w-full hover:bg-whites-grey/5 transition duration-200 ease-in-out">X</button>
+          <button
+            class="bg-whites-grey text-background-dark_blue rounded-lg w-full  p-3 hover:bg-whites-white transition duration-200 ease-in-out"
+          >
+            O
+          </button>
+        </div>
+        <div class="text-whites-grey text-center mb-4 hidden">
+          REMEMBER: X GOES FIRST
+        </div>
+      </section>
+      <div class="flex flex-col text-background-dark_blue gap-4 ">
+        <a href="" class="bg-oranges-dark p-1 py-3 text-md sm:text-xl rounded-xl shadow-[inset_0px_-8px_0px_#CC8B13] hover:bg-oranges-light transition duration-200 ease-in-out text-center">
+          <button>
+            NEW GAME (VS CPU)
+          </button>
+        </a>
+        <a href="./game.html" class="bg-blues-dark p-1 py-3 text-md sm:text-xl rounded-xl shadow-[inset_0px_-8px_0px_#118C87] hover:bg-blues-light transition duration-200 ease-in-out text-center">
+          <button>
+            NEW GAME (VS PLAYER)
+          </button>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
+
+
