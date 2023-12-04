@@ -10,3 +10,18 @@
     @apply w-[96px] sm:w-[140px] py-2 rounded-lg flex justify-center items-center flex-col;
 }
 
+.hover-x{
+    @apply hidden;
+}
+
+.hover-o{
+    @apply hidden;
+}
+
+.x{
+    @apply hidden;
+}
+
+.o{
+    @apply hidden;
+}
