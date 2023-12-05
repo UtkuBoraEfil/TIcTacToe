@@ -36,7 +36,6 @@
           <div class="w-[96px] sm:w-[140px] flex justify-end reloadbtn">
             <button
               type="button"
-              onclick="refreshPage()"
               class="flex items-center w-9 h-9 sm:w-12 sm:h-12 bg-whites-grey p-3 rounded-lg hover:bg-whites-white transition duration-200 ease-in-out"
             >
               <img src="./assets/reload.svg" alt="" />
@@ -129,15 +128,15 @@
         <div class="flex gap3 justify-between text-black">
           <div class="table bg-blues-dark text-sm sm:text-xl">
             <h2>X (PLAYER 1)</h2>
-            <p>0</p>
+            <p id="p1">0</p>
           </div>
           <div class="table bg-whites-grey text-sm sm:text-xl">
             <h2>TIES</h2>
-            <p>0</p>
+            <p id="tie">0</p>
           </div>
           <div class="table bg-oranges-dark text-sm sm:text-xl">
             <h2>O (PLAYER 2)</h2>
-            <p>0</p>
+            <p id="p2">0</p>
           </div>
         </div>
       </section>
@@ -154,12 +153,16 @@
           <h1 id="who_wins" class="text-4xl">ROUND TIED</h1>
         </div>
         <div class="flex items-center justify-center gap-5">
+            <a href="./index.html">
+                <button
+                  id="btn_quit"
+                  class="bg-whites-grey text-black px-4 py-3 rounded-lg shadow-[inset_0px_-4px_0px_#6B8997] hover:bg-whites-white transition duration-200 ease-in-out"
+                >
+                  QUIT
+                </button>
+            </a>
           <button
-            class="bg-whites-grey text-black px-4 py-3 rounded-lg shadow-[inset_0px_-4px_0px_#6B8997] hover:bg-whites-white transition duration-200 ease-in-out"
-          >
-            QUIT
-          </button>
-          <button
+            id="next_round"
             class="bg-oranges-dark text-black px-4 py-3 rounded-lg shadow-[inset_0px_-4px_0px_#CC8B13] hover:bg-oranges-light transition duration-200 ease-in-out"
           >
             NEXT ROUND
