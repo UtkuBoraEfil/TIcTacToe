@@ -184,7 +184,6 @@ function game_over(turn) {
 }
 
 //RELOAD
-function reload() {
     reload_button.addEventListener("click", ()=>{
         clicked = 0;
   turn = 'x';
@@ -212,7 +211,6 @@ function reload() {
       mx1.classList.add("o");
     });
     });
-}
 
 //buttons
 next_round.addEventListener("click", () => {
