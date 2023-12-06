@@ -26,6 +26,7 @@ function game() {
   let ties = 0;
   let turn = "x";
   let clicked = 0;
+  let clickedo = 0;
 
   checkbox.forEach((box) => {
     box.addEventListener("mouseover", () => {
@@ -75,17 +76,48 @@ function game() {
           childDiv = selected.getElementsByTagName("img")[2];
           childDiv.classList.add("hover-x");
           clicked++;
-          isOver(turn);
-          turn = "o";
-        } else if (turn == "o") {
-          selected.classList.add("active-o");
-          childDiv = selected.getElementsByTagName("img")[3];
-          childDiv.classList.remove("o");
-          childDiv = selected.getElementsByTagName("img")[0];
-          childDiv.classList.add("hover-o");
-          clicked++;
-          isOver(turn);
-          turn = "x";
+          if (isOver(turn) !== "game over") {
+            turn = "o";
+            //random
+            let cpu;
+            do {
+              var n = Math.random();
+              n = n * 9;
+              n = Math.floor(n) + 1;
+              if (n == 1) {
+                cpu = box_1;
+              } else if (n == 2) {
+                cpu = box_2;
+              } else if (n == 3) {
+                cpu = box_3;
+              } else if (n == 4) {
+                cpu = box_4;
+              } else if (n == 5) {
+                cpu = box_5;
+              } else if (n == 6) {
+                cpu = box_6;
+              } else if (n == 7) {
+                cpu = box_7;
+              } else if (n == 8) {
+                cpu = box_8;
+              } else if (n == 9) {
+                cpu = box_9;
+              }
+            } while (cpu.classList.contains("active") && clicked < 8);
+            if (!cpu.classList.contains("active") && clicked < 8) {
+              isOver(turn);
+              cpu.classList.add("active");
+              cpu.classList.add("active-o");
+              childDiv = cpu.getElementsByTagName("img")[3];
+              childDiv.classList.remove("o");
+              childDiv = cpu.getElementsByTagName("img")[0];
+              childDiv.classList.add("hover-o");
+              clicked++;
+              clickedo++;
+              console.log("console from cpu while", isOver(turn));
+              turn = "x";
+            }
+          }
         }
       }
     });
@@ -104,48 +136,56 @@ function game() {
       box_3.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_4.classList.contains(clas) &&
       box_5.classList.contains(clas) &&
       box_6.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_7.classList.contains(clas) &&
       box_8.classList.contains(clas) &&
       box_9.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_1.classList.contains(clas) &&
       box_5.classList.contains(clas) &&
       box_9.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_3.classList.contains(clas) &&
       box_5.classList.contains(clas) &&
       box_7.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_1.classList.contains(clas) &&
       box_4.classList.contains(clas) &&
       box_7.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_2.classList.contains(clas) &&
       box_5.classList.contains(clas) &&
       box_8.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (
       box_3.classList.contains(clas) &&
       box_6.classList.contains(clas) &&
       box_9.classList.contains(clas)
     ) {
       game_over(turn);
+      return "game over";
     } else if (clicked == 9) {
       game_over_tie();
     } else {
