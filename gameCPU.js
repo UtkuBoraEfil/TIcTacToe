@@ -51,10 +51,10 @@ function game() {
       if (!selected.classList.contains("active")) {
         if (turn == "x") {
           childDivX = selected.getElementsByTagName("img")[2];
-          childDivX.classList.toggle("hover-x");
+          childDivX.classList.add("hover-x");
         } else if (turn == "o") {
           childDivO = selected.getElementsByTagName("img")[0];
-          childDivO.classList.toggle("hover-o");
+          childDivO.classList.add("hover-o");rr
         }
       }
     });
